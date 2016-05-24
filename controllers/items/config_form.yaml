@@ -1,0 +1,30 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: martin.technologies::lang.controller.form.items.title
+
+# Model Form Field configuration
+form: $/martin/technologies/models/item/fields.yaml
+
+# Model Class name
+modelClass: Martin\Technologies\Models\Item
+
+# Default redirect location
+defaultRedirect: martin/technologies/items
+
+# Create page
+create:
+    title        : martin.technologies::lang.controller.form.items.create
+    redirect     : martin/technologies/items/update/:id
+    redirectClose: martin/technologies/items
+    flashSave    : martin.technologies::lang.controller.form.items.flashCreate
+
+# Update page
+update:
+    title        : martin.technologies::lang.controller.form.items.update
+    redirect     : martin/technologies/items
+    redirectClose: martin/technologies/items
+    flashSave    : martin.technologies::lang.controller.form.items.flashUpdate
+    flashDelete  : martin.technologies::lang.controller.form.items.flashDelete

@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label   : martin.technologies::lang.fields.item.title
+        span    : left
+        required: true
+    link:
+        label   : martin.technologies::lang.fields.item.link
+        span    : left
+    image:
+        label   : martin.technologies::lang.fields.item.image
+        type    : mediafinder
+        mode    : image
+        required: true
+    order:
+        label   : martin.technologies::lang.fields.item.order
+        span    : left
+    target:
+        label   : martin.technologies::lang.fields.item.target
+        type    : checkbox
+    enabled:
+        label   : martin.technologies::lang.fields.item.enabled
+        type    : checkbox
+        default : true

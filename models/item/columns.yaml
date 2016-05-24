@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    image:
+        label     : martin.technologies::lang.columns.item.image
+        type      : partial
+        path      : ~/plugins/martin/technologies/models/item/_image_column.htm
+        sortable  : false
+    order:
+        label     : martin.technologies::lang.columns.item.order
+    title:
+        label     : martin.technologies::lang.columns.item.title
+        searchable: true
+    link:
+        label     : martin.technologies::lang.columns.item.link
+        searchable: true
+    target:
+        label     : martin.technologies::lang.columns.item.target
+        type      : partial
+        path      : ~/plugins/martin/technologies/models/item/_target_column.htm
+        sortable  : false
+    enabled:
+        label     : martin.technologies::lang.columns.item.enabled
+        type      : partial
+        path      : ~/plugins/martin/technologies/models/item/_enabled_column.htm
+        sortable  : true

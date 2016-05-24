@@ -1,0 +1,14 @@
+{% for params in __SELF__.technologies %}
+    <div class="col s12 m4">
+        <div class="icon-block center-align">
+        {% if params.link %}
+            <a {% if params.target %}target="_blank"{% endif %} href="{{ params.link }}" class="blue-grey-text">
+        {% endif %}
+                <img class="circle responsive-img" src="storage/app/media{{ params.image }}" alt="{{ params.title }}" {% if params.title %}title="{{ params.title }}"{% endif %}>
+                <h5 class="center">{{ params.title }}</h5>
+        {% if params.link %}
+            </a>
+        {% endif %}
+        </div>
+    </div>
+{% endfor %}
