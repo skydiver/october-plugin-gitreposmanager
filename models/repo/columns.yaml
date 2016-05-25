@@ -1,0 +1,7 @@
+columns:
+    title:
+        label     : martin.gitreposmanager::lang.model.columns.repo.title
+        searchable: true
+    path:
+        label     : martin.gitreposmanager::lang.model.columns.repo.path
+        searchable: true

@@ -1,0 +1,17 @@
+name           : martin.gitreposmanager::lang.controller.form.repos.title
+form           : $/martin/gitreposmanager/models/repo/fields.yaml
+modelClass     : Martin\GitReposManager\Models\Repo
+defaultRedirect: martin/gitreposmanager/repos
+
+create:
+    title        : martin.gitreposmanager::lang.controller.form.repos.create
+    redirect     : martin/gitreposmanager/repos/update/:id
+    redirectClose: martin/gitreposmanager/repos
+    flashSave    : martin.gitreposmanager::lang.controller.form.repos.flashCreate
+
+update:
+    title        : martin.gitreposmanager::lang.controller.form.repos.update
+    redirect     : martin/gitreposmanager/repos
+    redirectClose: martin/gitreposmanager/repos
+    flashSave    : martin.gitreposmanager::lang.controller.form.repos.flashUpdate
+    flashDelete  : martin.gitreposmanager::lang.controller.form.repos.flashDelete

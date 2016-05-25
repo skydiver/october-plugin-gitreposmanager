@@ -1,0 +1,16 @@
+list            : $/martin/gitreposmanager/models/repo/columns.yaml
+modelClass      : Martin\GitReposManager\Models\Repo
+title           : martin.gitreposmanager::lang.controller.list.repos
+recordUrl       : martin/gitreposmanager/repos/update/:id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage  : 20
+showSetup       : true
+showSorting     : true
+defaultSort     :
+    column   : order
+    direction: asc
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt
