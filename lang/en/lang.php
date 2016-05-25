@@ -20,7 +20,7 @@ return [
                 'return'              => 'Return to repositories list',
                 'creating'            => 'Adding new repository ...',
                 'delete_confirmation' => 'Do you really want to delete this item?',
-                'after_refresh'       => 'Repos Updated'
+                'after_refresh'       => 'Repositories information updated'
             ]
         ],
         'list' => [
