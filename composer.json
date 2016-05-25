@@ -1,0 +1,6 @@
+{
+    "name": "martin/gitreposmanager",
+    "require": {
+        "cypresslab/gitelephant": "~1.0"
+    }
+}
