@@ -5,3 +5,9 @@ columns:
     path:
         label     : martin.gitreposmanager::lang.model.columns.repo.path
         searchable: true
+    branch:
+        label     : martin.gitreposmanager::lang.model.columns.repo.branch
+        searchable: true
+    commit:
+        label     : martin.gitreposmanager::lang.model.columns.repo.commit
+        searchable: true
