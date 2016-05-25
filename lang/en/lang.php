@@ -46,6 +46,9 @@ return [
                 'branch' => 'Branch',
                 'commit' => 'Commit'
             ]
+        ],
+        'errors' => [
+            'validator_is_readable' => 'Could not read from local repository'
         ]
     ]
 

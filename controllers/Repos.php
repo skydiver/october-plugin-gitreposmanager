@@ -6,7 +6,6 @@
     use Backend\Classes\Controller;
     use Martin\GitReposManager\Models\Repo;
 
-    use GitElephant\Repository;
 
     class Repos extends Controller {
 
@@ -38,24 +37,12 @@
         }
 
         public function onRefresh() {
-
             $repos = Repo::all();
-
             foreach($repos as $repo) {
-
-                $git    = Repository::open($repo->path);
-                $branch = $git->getMainBranch()->getName();
-                $commit = $git->getCommit()->getSha();
-
-                $repo->branch = $branch;
-                $repo->commit = $commit;
-                $repo->save();
-
+                $repo->touch();
             }
-
             Flash::success(Lang::get('martin.gitreposmanager::lang.controller.view.repos.after_refresh'));
             return \Redirect::to(Backend::url('martin/gitreposmanager/repos'));
-
         }
 
     }

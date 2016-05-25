@@ -2,8 +2,7 @@
 
     namespace Martin\GitReposManager;
 
-    use Backend;
-    use Controller;
+    use Backend, Controller, Lang, Validator;
     use System\Classes\PluginBase;
 
     class Plugin extends PluginBase {
@@ -15,6 +14,15 @@
                 'author'      => 'Martin',
                 'icon'        => 'icon-cubes'
             ];
+        }
+
+        public function boot() {
+
+            Validator::extend('isReadable', function($attribute, $value, $parameters, $validator) {
+                if(is_readable($value)) return true;
+                return false;
+            }, Lang::get('martin.gitreposmanager::lang.model.errors.validator_is_readable'));
+
         }
 
         public function registerNavigation() {
