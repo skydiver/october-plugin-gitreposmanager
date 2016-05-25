@@ -15,6 +15,7 @@ return [
         'view' => [
             'repos' => [
                 'new'                 => 'Add Repo',
+                'refresh'             => 'Refresh',
                 'breadcrumb_label'    => 'Repos',
                 'return'              => 'Return to repositories list',
                 'creating'            => 'Adding new repository ...',

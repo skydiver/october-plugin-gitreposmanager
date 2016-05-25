@@ -12,6 +12,8 @@
                 $table->increments('id')->unsigned();
                 $table->string('title' ,  50);
                 $table->string('path'  , 200)->unique();
+                $table->string('branch',  50)->nullable();
+                $table->string('status',  50)->nullable();
                 $table->timestamps();
             });
         }
