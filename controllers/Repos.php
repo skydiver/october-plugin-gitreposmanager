@@ -2,11 +2,9 @@
 
     namespace Martin\GitReposManager\Controllers;
 
-    use BackendMenu;
+    use BackendMenu, Flash, Lang;
     use Backend\Classes\Controller;
-    use Flash;
     use Martin\GitReposManager\Models\Repo;
-    use Lang;
 
     class Repos extends Controller {
 
@@ -35,6 +33,18 @@
                 Flash::success(Lang::get('backend::lang.form.delete_success', ['name' => Lang::get('martin.gitreposmanager::lang.controller.form.repos.title')]));
             }
             return $this->listRefresh();
+        }
+
+        public function refresh() {
+
+            $repos = Repo::all();
+
+            foreach($repos as $repo) {
+
+
+
+            }
+
         }
 
     }
