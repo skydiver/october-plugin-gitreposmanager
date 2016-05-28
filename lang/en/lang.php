@@ -41,10 +41,13 @@ return [
     'model' => [
         'columns' => [
             'repo' => [
-                'title'  => 'Repository Title',
-                'path'   => 'Repository Path',
-                'branch' => 'Branch',
-                'commit' => 'Commit'
+                'title'   => 'Repository Title',
+                'path'    => 'Repository Path',
+                'branch'  => 'Branch',
+                'commit'  => 'Commit',
+                'author'  => 'Author',
+                'message' => 'Message',
+                'date'    => 'Commit Date'
             ]
         ],
         'errors' => [

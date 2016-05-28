@@ -7,3 +7,20 @@ fields:
         label   : martin.gitreposmanager::lang.model.columns.repo.title
     path:
         label   : martin.gitreposmanager::lang.model.columns.repo.path
+
+    author:
+        label   : martin.gitreposmanager::lang.model.columns.repo.title
+        context : update
+        disabled: true
+        span    : left
+    date:
+        label   : martin.gitreposmanager::lang.model.columns.repo.date
+        context : update
+        disabled: true
+        span    : right
+    message:
+        label   : martin.gitreposmanager::lang.model.columns.repo.message
+        type    : textarea
+        size    : small
+        context : update
+        disabled: true

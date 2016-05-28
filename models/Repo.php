@@ -28,6 +28,13 @@
             $this->date    = $commit->getDatetimeAuthor();
         }
 
+        public function filterFields($fields, $context = null) {
+            if($context == 'update') {
+                $fields->path->disabled = true;
+                $fields->path->required = false;
+            }
+        }
+
     }
 
 ?>

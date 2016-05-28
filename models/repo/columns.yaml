@@ -11,3 +11,5 @@ columns:
     commit:
         label     : martin.gitreposmanager::lang.model.columns.repo.commit
         searchable: true
+    date:
+        label     : martin.gitreposmanager::lang.model.columns.repo.date
