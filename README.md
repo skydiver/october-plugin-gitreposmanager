@@ -19,3 +19,9 @@ Start by adding all your repos.
 After saving, the last commit information is loaded.
 
 You need to manually update the repos to se the updated information.
+
+
+
+####Installation
+
+In your OctoberCMS backend, go to Updates > Install plugins and search for "martin.gitreposmanager" or install from October Marketplace.
