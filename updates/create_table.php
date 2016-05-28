@@ -14,6 +14,9 @@
                 $table->string('path'  , 200)->unique();
                 $table->string('branch',  50)->nullable();
                 $table->string('commit',  40)->nullable();
+                $table->string('author', 100);
+                $table->text  ('message');
+                $table->datetime('date');
                 $table->timestamps();
             });
         }

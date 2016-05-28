@@ -20,9 +20,12 @@
             $path   = $this->getAttribute('path');
             $git    = Repository::open($path);
             $branch = $git->getMainBranch()->getName();
-            $commit = $git->getCommit()->getSha();
-            $this->branch = $branch;
-            $this->commit = $commit;
+            $commit = $git->getCommit();
+            $this->branch  = $branch;
+            $this->commit  = $commit->getSha();
+            $this->author  = $commit->getAuthor();
+            $this->message = $commit->getMessage();
+            $this->date    = $commit->getDatetimeAuthor();
         }
 
     }
