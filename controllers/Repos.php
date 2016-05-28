@@ -5,7 +5,7 @@
     use Backend, BackendMenu, Flash, Lang;
     use Backend\Classes\Controller;
     use Martin\GitReposManager\Models\Repo;
-
+    use System\Classes\SettingsManager;
 
     class Repos extends Controller {
 
@@ -21,7 +21,8 @@
 
         public function __construct() {
             parent::__construct();
-            BackendMenu::setContext('Martin.GitReposManager', 'gitreposmanager', 'repos');
+            BackendMenu::setContext('October.System', 'system', 'config');
+            SettingsManager::setContext('Martin.GitReposManager', 'gitreposmanager');
             $this->addJs('/plugins/martin/gitreposmanager/assets/js/scripts.js');
         }
 

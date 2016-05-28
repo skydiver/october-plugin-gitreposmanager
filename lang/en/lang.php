@@ -8,7 +8,8 @@ return [
     ],
 
     'navigation' => [
-        'label' => 'Git Repos Manager'
+        'label'       => 'Git Repos Manager',
+        'description' => 'Keep track of your GIT repos.'
     ],
 
     'controller' => [

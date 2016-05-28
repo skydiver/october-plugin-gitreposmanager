@@ -7,7 +7,7 @@ recordsPerPage  : 20
 showSetup       : true
 showSorting     : true
 defaultSort     :
-    column   : order
+    column   : commit
     direction: asc
 showCheckboxes: true
 toolbar:

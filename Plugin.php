@@ -4,6 +4,7 @@
 
     use Backend, Controller, Lang, Validator;
     use System\Classes\PluginBase;
+    use System\Classes\SettingsManager;
 
     class Plugin extends PluginBase {
 
@@ -25,14 +26,28 @@
 
         }
 
-        public function registerNavigation() {
+        // public function registerNavigation() {
+        //     return [
+        //         'gitreposmanager' => [
+        //             'label'       => 'martin.gitreposmanager::lang.navigation.label',
+        //             'url'         => Backend::url('martin/gitreposmanager/repos'),
+        //             'permissions' => ['martin.gitreposmanager.access_repos'],
+        //             'icon'        => 'icon-cubes',
+        //             'order'       => 500,
+        //         ]
+        //     ];
+        // }
+
+        public function registerSettings() {
             return [
                 'gitreposmanager' => [
                     'label'       => 'martin.gitreposmanager::lang.navigation.label',
+                    'description' => 'martin.gitreposmanager::lang.navigation.description',
+                    'category'    => SettingsManager::CATEGORY_SYSTEM,
+                    'icon'        => 'icon-git',
                     'url'         => Backend::url('martin/gitreposmanager/repos'),
-                    'permissions' => ['martin.gitreposmanager.access_repos'],
-                    'icon'        => 'icon-cubes',
                     'order'       => 500,
+                    'permissions' => ['martin.gitreposmanager.access_repos'],
                 ]
             ];
         }
