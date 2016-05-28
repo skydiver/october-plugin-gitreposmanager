@@ -13,15 +13,15 @@ This plugin is an alternative to connect with SSH, goto every directory and look
 
 
 
+####Installation
+
+In your OctoberCMS backend, go to Updates > Install plugins and search for "martin.gitreposmanager" or install from October Marketplace.
+
+
+
 #### Usage
-Start by adding all your repos.
+Start by adding all your repos from Backend > Settings > System > Git Repos Manager
 
 After saving, the last commit information is loaded.
 
 You need to manually update the repos to se the updated information.
-
-
-
-####Installation
-
-In your OctoberCMS backend, go to Updates > Install plugins and search for "martin.gitreposmanager" or install from October Marketplace.
