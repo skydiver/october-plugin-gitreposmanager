@@ -1,7 +1,7 @@
 list            : $/martin/gitreposmanager/models/repo/columns.yaml
 modelClass      : Martin\GitReposManager\Models\Repo
 title           : martin.gitreposmanager::lang.controller.list.repos
-recordUrl       : martin/gitreposmanager/repos/update/:id
+recordOnClick   : $.gitreposmanager.updateRepo(":id")
 noRecordsMessage: backend::lang.list.no_records
 recordsPerPage  : 20
 showSetup       : true

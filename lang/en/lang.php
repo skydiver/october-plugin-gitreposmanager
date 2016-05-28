@@ -41,8 +41,8 @@ return [
     'model' => [
         'columns' => [
             'repo' => [
-                'title'  => 'Title',
-                'path'   => 'Path',
+                'title'  => 'Repository Title',
+                'path'   => 'Repository Path',
                 'branch' => 'Branch',
                 'commit' => 'Commit'
             ]

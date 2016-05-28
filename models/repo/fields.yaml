@@ -5,7 +5,5 @@
 fields:
     title:
         label   : martin.gitreposmanager::lang.model.columns.repo.title
-        span    : left
     path:
         label   : martin.gitreposmanager::lang.model.columns.repo.path
-        span    : left

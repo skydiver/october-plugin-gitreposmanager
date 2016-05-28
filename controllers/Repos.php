@@ -22,16 +22,42 @@
         public function __construct() {
             parent::__construct();
             BackendMenu::setContext('Martin.GitReposManager', 'gitreposmanager', 'repos');
+            $this->addJs('/plugins/martin/gitreposmanager/assets/js/scripts.js');
         }
 
-        public function index_onDelete() {
-            if($checkedIds = post('checked')) {
-                foreach($checkedIds as $itemId) {
-                    if(! $table = Repo::find($itemId))
+        public function onCreateRepo() {
+            $this->asExtension('FormController')->create();
+            return $this->makePartial('create_repo');
+        }
+
+        public function onCreate() {
+            $this->asExtension('FormController')->create_onSave();
+            return $this->listRefresh();
+        }
+
+        public function onUpdateRepo() {
+            $this->asExtension('FormController')->update(post('id'));
+            $this->vars['id'] = post('id');
+            return $this->makePartial('update_repo');
+        }
+
+        public function onUpdate()     {
+            $this->asExtension('FormController')->update_onSave(post('id'));
+            return $this->listRefresh();
+        }
+
+        public function onDelete() {
+            $checkedIds = post('checked') ?: (array) post('id');
+            if(is_array($checkedIds) && count($checkedIds)) {
+                foreach($checkedIds as $recordId) {
+                    if(!$record = Repo::find($recordId)) {
                         continue;
-                    $table->delete();
+                    }
+                    $record->delete();
                 }
-                Flash::success(Lang::get('backend::lang.form.delete_success', ['name' => Lang::get('martin.gitreposmanager::lang.controller.form.repos.title')]));
+                Flash::success(Lang::get('backend::lang.list.delete_selected_success'));
+            } else {
+                Flash::error(Lang::get('backend::lang.list.delete_selected_empty'));
             }
             return $this->listRefresh();
         }
@@ -42,7 +68,7 @@
                 $repo->touch();
             }
             Flash::success(Lang::get('martin.gitreposmanager::lang.controller.view.repos.after_refresh'));
-            return \Redirect::to(Backend::url('martin/gitreposmanager/repos'));
+            return $this->listRefresh();
         }
 
     }
