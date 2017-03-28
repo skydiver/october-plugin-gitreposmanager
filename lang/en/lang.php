@@ -30,7 +30,7 @@ return [
         'form' => [
             'repos' => [
                 'title'       => 'Repository',
-                'create'      => 'Add New Repository',
+                'create'      => 'Add Repository',
                 'update'      => 'Update Repository',
                 'flashCreate' => 'The repository has been created successfully',
                 'flashUpdate' => 'The repository has been updated successfully',
@@ -42,6 +42,8 @@ return [
     'model' => [
         'columns' => [
             'repo' => [
+                'clone'   => 'Clone Repo',
+                'url'     => 'Repository URL',
                 'title'   => 'Repository Title',
                 'path'    => 'Repository Path',
                 'branch'  => 'Branch',

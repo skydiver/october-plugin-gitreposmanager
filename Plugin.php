@@ -13,30 +13,9 @@
                 'name'        => 'martin.gitreposmanager::lang.plugin.name',
                 'description' => 'martin.gitreposmanager::lang.plugin.description',
                 'author'      => 'Martin',
-                'icon'        => 'icon-cubes'
+                'icon'        => 'icon-git'
             ];
         }
-
-        public function boot() {
-
-            Validator::extend('isReadable', function($attribute, $value, $parameters, $validator) {
-                if(is_readable($value)) return true;
-                return false;
-            }, Lang::get('martin.gitreposmanager::lang.model.errors.validator_is_readable'));
-
-        }
-
-        // public function registerNavigation() {
-        //     return [
-        //         'gitreposmanager' => [
-        //             'label'       => 'martin.gitreposmanager::lang.navigation.label',
-        //             'url'         => Backend::url('martin/gitreposmanager/repos'),
-        //             'permissions' => ['martin.gitreposmanager.access_repos'],
-        //             'icon'        => 'icon-cubes',
-        //             'order'       => 500,
-        //         ]
-        //     ];
-        // }
 
         public function registerSettings() {
             return [
@@ -56,6 +35,12 @@
             return [
                 'martin.gitreposmanager.access_repos' => ['label' => 'Access Git Repos Manager page', 'tab' => 'Git Repos Manager'],
             ];
+        }
+        
+        public function register() {
+            Validator::extend('isReadable', function($attribute, $value, $parameters, $validator) {
+                return is_readable($value);
+            }, Lang::get('martin.gitreposmanager::lang.model.errors.validator_is_readable'));
         }
 
     }
