@@ -1,5 +1,4 @@
 # Git Repos Manager
-
 Keep track of your Git repos.
 
 
@@ -13,7 +12,7 @@ This plugin is an alternative to connect with SSH, goto every directory and look
 
 
 
-####Installation
+#### Installation
 
 In your OctoberCMS backend, go to Updates > Install plugins and search for "martin.gitreposmanager" or install from October Marketplace.
 

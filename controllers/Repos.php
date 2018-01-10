@@ -6,6 +6,7 @@
     use Backend\Classes\Controller;
     use Martin\GitReposManager\Models\Repo;
     use System\Classes\SettingsManager;
+    use GitElephant\Repository;
 
     class Repos extends Controller {
 
@@ -57,6 +58,25 @@
                     $record->delete();
                 }
                 Flash::success(Lang::get('backend::lang.list.delete_selected_success'));
+            } else {
+                Flash::error(Lang::get('backend::lang.list.delete_selected_empty'));
+            }
+            return $this->listRefresh();
+        }
+
+        public function onPull() {
+            $checkedIds = post('checked') ?: (array) post('id');
+            if(is_array($checkedIds) && count($checkedIds)) {
+                foreach($checkedIds as $recordId) {
+                    if(!$record = Repo::find($recordId)) {
+                        continue;
+                    }
+                    $path = $record->path;
+                    $git  = Repository::open($path);
+                    $git->pull();
+                    $record->touch();
+                }
+                Flash::success(Lang::get('martin.gitreposmanager::lang.controller.view.repos.after_pull'));
             } else {
                 Flash::error(Lang::get('backend::lang.list.delete_selected_empty'));
             }

@@ -16,12 +16,15 @@ return [
         'view' => [
             'repos' => [
                 'new'                 => 'Add Repo',
-                'refresh'             => 'Refresh Repos',
+                'refresh'             => 'Refresh All Repos',
+                'pull'                => 'Pull Repo',
                 'breadcrumb_label'    => 'Repos',
                 'return'              => 'Return to repositories list',
                 'creating'            => 'Adding new repository ...',
                 'delete_confirmation' => 'Do you really want to delete this item?',
-                'after_refresh'       => 'Repositories information updated'
+                'after_refresh'       => 'Repositories information updated',
+                'after_pull'          => 'Pull remote completed',
+                'pull_confirm'        => 'Are you sure you want to pull this repo?',
             ]
         ],
         'list' => [
