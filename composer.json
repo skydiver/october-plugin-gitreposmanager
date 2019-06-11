@@ -4,6 +4,6 @@
     "description": "Keep track of your Git repos from OctoberCMS backend",
     "homepage": "https://github.com/skydiver/",
     "require": {
-        "cypresslab/gitelephant": "~1.0"
+        "cypresslab/gitelephant": "~4.0"
     }
 }
